@@ -14,4 +14,4 @@ Si vous souhaitez modifier l'intervalle de 10min, changez la valeur de StartInte
 Modifiez les noms autorisés par le script en modifiant la variable suivante (début du script)
 <img width="72" alt="Capture d’écran 2023-10-22 à 16 22 32" src="https://github.com/c22dev/jailEtudiant/assets/102235607/c69f7497-ec47-458e-91dc-bee793bca380">
 Par défaut, les noms d'entreprises d'imprimantes commun sont mis, ainsi que Google (facultatif si prevu de desinstaller Google Chrome > à enlever).
-Liste disponible dans le fichier FILTRES.md
+Liste disponible dans le fichier [FILTRES.md](https://raw.githubusercontent.com/c22dev/jailEtudiant/main/FILTRES.md)
