@@ -1,0 +1,3 @@
+google
+canon
+hp
