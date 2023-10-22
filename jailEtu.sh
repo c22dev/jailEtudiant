@@ -6,10 +6,12 @@
 # variables
 # on autorise ici des bundle ids
 # google est autorisé donc chrome pourrait être lancé, vous pouvez l'enlever si besoin
-elements=("google" "canon" "hp")
+# https://support.apple.com/en-us/HT201311 j'ai pris les noms depuis cette liste complete
+# si un élève ne parvient pas à imprimer, on peut rajouter le bundle id de son imprimante
+elements=("google" "canon" "hp" "apple" "canon" "aurora" "brother" "conexant" "deli" "dell" "develop" "eline" "epson" "f+" "fuji" "xerox" "fujifilm" "funai" "g&g" "gandg" "gestetner" "hewlett-packard" "hewlettpackard" "infotec" "konica" "kyocera" "lanier" "airprint" "lexmark" "muratec" "lg" "xiaomi" "mi" "munbyn" "nec" "nrg" "ntt" "oki" "olivetti" "panasonic" "pantum" "princiao" "prink" "ricoh" "rollo" "samsung" "savin" "sharp" "sindoh" "star-micronics" "star_micronics" "starmicronics" "micronics" "star" "ta" "toshiba" "zink" "iprint" "lantronix" "lexmark" "lrs" "seh")
 app_files=()
 
-# func
+# func de check de bundle id 
 function check_bundle_id {
     bundle_id=$1
     for element in "${elements[@]}"; do
