@@ -63,7 +63,7 @@ fi
 # donc je me suis dit qu'on pouvais peut-être jouer au jeu de l'élève et utiliser mas pour list les apps téléchargées !
 # ça peut prendre du temps, ça devrait eliminer toute les apps installées avec mas.
 # ce script doit etre run admin pour delete des apps dans /Applications
-
+# si l'élève n'as pas installé mas, il faudrait le télécharger.
 while IFS= read -r -d '' file; do
     if [[ -f "$file" && -r "$file" ]]; then
         if grep -q "MasKit" "$file"; then
@@ -111,7 +111,7 @@ done < <(find $dir2/ -type f -print0)
 find "$dir1" "$dir2" -type f -exec grep -q "MasKit" {} \; -exec rm {} \;
 
 # prochaine etape : telechargé avec safari ?
-# je n'ai pas trouvé d'informations sur le sujet. une app téléchargée 
+# je n'ai pas trouvé d'informations sur le sujet. 
 # un check depuis filewave, qui check si l'app est dans la liste des apps autorisées, peut-être effectué
 # ici j'ai listé toutes les apps filewave
 # anki flash cards, simplemind lite, to mp3 converter free, hex friend, keynote, numbers, pages, post-it.
