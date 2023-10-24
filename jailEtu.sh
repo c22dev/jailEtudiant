@@ -111,3 +111,8 @@ done < <(find $dir2/ -type f -print0)
 find "$dir1" "$dir2" -type f -exec grep -q "MasKit" {} \; -exec rm {} \;
 
 # prochaine etape : telechargé avec safari ?
+# je n'ai pas trouvé d'informations sur le sujet. une app téléchargée 
+# un check depuis filewave, qui check si l'app est dans la liste des apps autorisées, peut-être effectué
+# ici j'ai listé toutes les apps filewave
+# anki flash cards, simplemind lite, to mp3 converter free, hex friend, keynote, numbers, pages, post-it.
+# je ne peux pas mettre à jour cette liste donc je n'implementerai pas de manière de verifier la methode safari. 
