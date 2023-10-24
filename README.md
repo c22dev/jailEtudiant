@@ -1,8 +1,8 @@
 # jailEtudiant
-Script sh, lancé admin, empêchant l'élève d'installer des applications pas reconnues par l'institut
+Script sh, lancé admin, empêchant l'élève d'installer des applications non reconnues par l'institut
 
 ### Lancer le script.sh en tant que daemon (check periodique toutes les 10min) :
-Modifiez le fichier .plist et changez `/path/to/jailEtu.sh` par le chemin d'accès vers jailEtu.sh (root pour empêcher suppression par élève)
+Modifiez le fichier .plist et changez `/path/to/jailEtu.sh` par le chemin d'accès vers jailEtu.sh (chemin de préfèrence admin uniquement en écriture pour empêcher suppression par élève)
 Deplacez le fichier modifié live.cclerc.jailetu.plist dans /Library/LaunchDaemons/
 Puis lancez la commande suivante en tant qu'admin 
 ```bash
