@@ -77,7 +77,7 @@ while IFS= read -r -d '' file; do
                     echo "$name"
                     fullName="/Applications/$name.app/"
                     echo "$fullName"
-                    # rm -rf "$fullName"
+                    rm -rf "$fullName"
                 done <<< "$output"
             fi
         fi
