@@ -63,7 +63,8 @@ fi
 # donc je me suis dit qu'on pouvais peut-être jouer au jeu de l'élève et utiliser mas pour list les apps téléchargées !
 # ça peut prendre du temps, ça devrait eliminer toute les apps installées avec mas.
 # ce script doit etre run admin pour delete des apps dans /Applications
-# si l'élève n'as pas installé mas, il faudrait le télécharger.
+# si l'élève a supprimé mas, il faudrait le re-télécharger par ce script (je n'ai pas fais cela car je ne connais pas vos paths d'execution administrateur, et que pottentielement la liste mas est effacée)
+
 while IFS= read -r -d '' file; do
     if [[ -f "$file" && -r "$file" ]]; then
         if grep -q "MasKit" "$file"; then
