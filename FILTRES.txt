@@ -11,6 +11,7 @@ dell
 develop
 eline
 epson
+electron
 f+
 fuji
 xerox
