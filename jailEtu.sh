@@ -9,7 +9,7 @@
 # https://support.apple.com/en-us/HT201311 j'ai pris les noms depuis cette liste complete
 # si un élève ne parvient pas à imprimer, on peut rajouter le bundle id de son imprimante
 # le plus souvent, les imprimantes qui utilisent AirPrint sont tous registered sous le bundle com.apple.print.PrinterProxy.
-elements=("google" "canon" "hp" "apple" "canon" "aurora" "brother" "conexant" "deli" "dell" "develop" "eline" "epson" "electron" "f+" "fuji" "xerox" "fujifilm" "funai" "g&g" "gandg" "gestetner" "hewlett-packard" "hewlettpackard" "infotec" "konica" "kyocera" "lanier" "airprint" "lexmark" "muratec" "lg" "xiaomi" "mi" "munbyn" "nec" "nrg" "ntt" "oki" "olivetti" "panasonic" "pantum" "princiao" "prink" "ricoh" "rollo" "samsung" "savin" "sharp" "sindoh" "star-micronics" "star_micronics" "starmicronics" "micronics" "star" "ta" "toshiba" "zink" "iprint" "lantronix" "lexmark" "lrs" "seh")
+elements=("google" "canon" "hp" "apple" "canon" "aurora" "brother" "conexant" "deli" "dell" "develop" "eline" "epson" "f+" "fuji" "xerox" "fujifilm" "funai" "g&g" "gandg" "gestetner" "hewlett-packard" "hewlettpackard" "infotec" "konica" "kyocera" "lanier" "airprint" "lexmark" "muratec" "lg" "xiaomi" "mi" "munbyn" "nec" "nrg" "ntt" "oki" "olivetti" "panasonic" "pantum" "princiao" "prink" "ricoh" "rollo" "samsung" "savin" "sharp" "sindoh" "star-micronics" "star_micronics" "starmicronics" "micronics" "star" "ta" "toshiba" "zink" "iprint" "lantronix" "lexmark" "lrs" "seh")
 app_files=()
 dir1="/Users/etudiant/Library/Printers"
 dir2="/Users/etudiant/Library/Google/GoogleSoftwareUpdate/GoogleSoftwareUpdate.bundle/Contents/Helpers"
