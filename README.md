@@ -1,4 +1,4 @@
-# jailEtudiant
+# jailEtudiant v1.1
 Script sh, lancé admin, empêchant l'élève d'installer des applications non reconnues par l'institut
 
 ### Lancer le script.sh en tant que daemon (check periodique toutes les 10min) :
