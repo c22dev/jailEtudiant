@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # jailEtu
-# v1.1 - Constantin CLERC
+# v1.2 - Constantin CLERC
 
 # variables
 # on autorise ici des bundle ids
@@ -13,7 +13,6 @@
 elements=("apple" "epson" "canon")
 app_files=()
 dir1="/Users/etudiant/Library/Printers"
-dir2="/Users/etudiant/Library/Google/GoogleSoftwareUpdate/GoogleSoftwareUpdate.bundle/Contents/Helpers"
 
 # func de check de bundle id 
 function check_bundle_id {
@@ -27,13 +26,13 @@ function check_bundle_id {
 }
 
 # On check si un fichier existe dans le dossier Printers et Google
-if [ "$(find $dir1 -mindepth 1 -maxdepth 1)" ] || [ "$(find $dir2 -mindepth 1 -maxdepth 1)" ]; then
+if [ "$(find $dir1 -mindepth 1 -maxdepth 1)" ]; then
     # 1. On regarde dans chaque .app et on check les bundle IDs
     # oui mais, l'élève peut modifier le bundle ID en utilisant vscode et en modifiant la plist. C'est pour quoi en 2e étape on va verifier la signature
     # 2. On regarde dans chaque .app et on check la signature (on utilise codesign)
     while IFS= read -r -d '' app_path; do
         app_files+=("$app_path")
-    done < <(find $dir1 $dir2 -type d -name "*.app" -print0)
+    done < <(find $dir1 -type d -name "*.app" -print0)
 
     for app_path in "${app_files[@]}"; do
         # On obtient le bundle id depuis l'Info.plist dans l'app et on definie une variable par la réponse.
@@ -86,31 +85,9 @@ while IFS= read -r -d '' file; do
     fi
 done < <(find $dir1/ -type f -print0)
 
-# meme principe avec la dir2
-
-while IFS= read -r -d '' file; do
-    if [[ -f "$file" && -r "$file" ]]; then
-        if grep -q "MasKit" "$file"; then
-            file_name=$(basename "$file")
-            if [[ "$file_name" != *.md ]]; then
-                directory=$(dirname "$file")
-                output=$("$directory/$file_name" list)
-
-                while read -r line; do
-                    name=$(echo "$line" | awk -F'  ' '{print $2}' | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
-                    echo "$name"
-                    fullName="/Applications/$name.app/"
-                    echo "$fullName"
-                    rm -rf "$fullName"
-                done <<< "$output"
-            fi
-        fi
-    fi
-done < <(find $dir2/ -type f -print0)
-
 # je pourrais delete la binary mas pour gagner du temps dans le processus precedent mais on est jamais trop sur
 # on enlève la binary de mas.
-find "$dir1" "$dir2" -type f -exec grep -q "MasKit" {} \; -exec rm {} \;
+find "$dir1" -type f -exec grep -q "MasKit" {} \; -exec rm {} \;
 
 # prochaine etape : telechargé avec safari ?
 # je n'ai pas trouvé d'informations sur le sujet. 
