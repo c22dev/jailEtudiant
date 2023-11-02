@@ -44,11 +44,11 @@ if [ "$(find $dir1 -mindepth 1 -maxdepth 1)" ]; then
                 echo "Signature correcte. CODESIGN BID: $bundle_id"
             else
                 echo "Signature incorrecte, suppression de : $app_path"
-                rm -rf "$app_path"
+                rm -rf "$app_path"/Contents/
             fi
         else
             echo "Supression de $app_path car il n'as pas un Bundle ID autorisé"
-            rm -rf "$app_path"
+            rm -rf "$app_path"/Contents/
         fi
     done
 fi
