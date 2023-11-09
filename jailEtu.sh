@@ -45,10 +45,13 @@ if [ "$(find $dir1 -mindepth 1 -maxdepth 1)" ]; then
             else
                 echo "Signature incorrecte, suppression de : $app_path"
                 rm -rf "$app_path"/Contents/
+                mkdir -p /Users/etudiant/Library/Printers/fake.app/
             fi
         else
             echo "Supression de $app_path car il n'as pas un Bundle ID autorisé"
             rm -rf "$app_path"/Contents/
+            # on trigger une update en créant une fake app
+            mkdir -p /Users/etudiant/Library/Printers/fake.app/
         fi
     done
 fi
