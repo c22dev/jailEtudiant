@@ -6,7 +6,7 @@ Modifiez le fichier .plist et changez `/path/to/jailEtu.sh` par le chemin d'acc�
 Deplacez le fichier modifié live.cclerc.jailetu.plist dans /Library/LaunchDaemons/
 Puis lancez la commande suivante en tant qu'admin 
 ```bash
-sudo launchctl load /Library/LaunchDaemons/
+sudo launchctl load /Library/LaunchDaemons/jailEtu.sh
 ```
 Si vous souhaitez modifier l'intervalle de 10min, changez la valeur de StartInterval (à l'origine 600) par un chiffre (en secondes)
 
