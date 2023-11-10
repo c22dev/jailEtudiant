@@ -6,6 +6,8 @@ Update 1.2 : On enlève le path Chrome des verifications comme plus valide.
 Update 1.3 : On piège le cache (si un autre script essaie d'en faire un à partir du dossier Printers, voir [cacheIT!](https://github.com/c22dev/cacheIT)) en cassant l'application et son contenu.
 
 Update 1.3.1 : On crée une application vide falsifiée (fake.app) pour déclencher la mise à jour d'un pottentiel cache en plus de la corruption précédente.
+
+Cette branche varie de la branche principale car elle ne supprime pas les apps mais les corrompt.
 ### Lancer le script.sh en tant que daemon (check periodique toutes les 10min) :
 Modifiez le fichier .plist et changez `/path/to/jailEtu.sh` par le chemin d'accès vers jailEtu.sh (chemin de préfèrence admin uniquement en écriture pour empêcher suppression par élève)
 Deplacez le fichier modifié live.cclerc.jailetu.plist dans /Library/LaunchDaemons/
