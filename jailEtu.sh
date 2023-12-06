@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # jailEtu
-# v1.2 - Constantin CLERC
+# v1.2
 
 # variables
 # on autorise ici des bundle ids
